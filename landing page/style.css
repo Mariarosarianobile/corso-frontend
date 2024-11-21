@@ -3,6 +3,8 @@
     --text-color: #1e1c2a;
     --big-font: 4rem;
     --h2-size: 2.24rem;
+    --section-padding-top-bottom: 50px;
+    --border-radius: 0.5rem;
 
 }
 
@@ -22,6 +24,8 @@ main {
     max-width: 1200px;
     margin: auto;
 }
+
+/* -----------------------------------------NAV CSS ---------------------------------*/
 
 nav {
     display: flex;
@@ -76,10 +80,23 @@ nav {
 }
 
 .nav-links-icon .fa-moon {
+    width: 100%;
+    height: 100%;
     font-size: 25px;
     cursor: pointer;
 }
+/* -----------------------------------------SECTION CSS ---------------------------------*/
+.section-name{
+        color: var(--main-color);
+        font-weight: 500;
+}
 
+.section-title{
+    font-size: var(--h2-size);
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+/* -----------------------------------------HOME CSS ---------------------------------*/
 .home {
     height: 100vh;
 }
@@ -105,13 +122,55 @@ nav {
     color: var(--main-color);
 }
 
-.home-left h2 {
-    font-size: var(--h2-size);
-    color: var(--text-color);
-    margin: 1rem 0;
+.home-left a {
+    background-color: var(--main-color);
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border-radius: var(--border-radius);
+    text-decoration: none;
 }
 
-.home-left a {
+.home-right img {
+    width: 100%;
+    height: 100%;
+}
+/* -----------------------------------------ABOUT SECTION ---------------------------------*/
+.about{
+    padding: var(--section-padding-top-bottom) 0;
+}
+
+.about .container{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.about-left img{
+    width: 80%;
+    border-radius: var(--border-radius);
+}
+
+.about-left, .about-right{
+    width: 50%;
+}
+
+.about-right{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.about-right p{
+    margin: 0.8rem 0 1.8rem;
+}
+
+.about-right h2{
+    font-size: var(--h2-size);
+    color: var(--text-color);
+}
+
+    .about-right a {
     background-color: var(--main-color);
     display: inline-block;
     padding: 10px 20px;
@@ -120,7 +179,44 @@ nav {
     text-decoration: none;
 }
 
-.home-right img {
+/* -----------------------------------------MENU SECTION ---------------------------------*/
+
+.menu-top{
+    text-align: center;
+}
+
+.menu-cards{
+    display: flex;
+}
+
+.menu-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 3);
+    box-shadow: 0 2px 4px rgb(4 64 54 / 10%);
+    border-radius: var(--border-radius);
+}
+
+.fa-cart-shopping{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 8px;
+    background-color: var(--main-color);
+    border-radius: 0 0.5rem 0 0.5rem;
+    font-size: 15px;
+}
+
+.menu-item_img{
+    width: 200px;
+    height: 200px;
+}
+
+.menu-item_img img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
